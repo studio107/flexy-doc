@@ -12,4 +12,8 @@
         {{ end }}
         {{ partial "pagination.html" $paginator }}
     {{ end }}
+
+    {{ partial "content-footer.html" . }}
+    {{ partial "next-prev-page.html" . }}
+    {{ template "_internal/disqus.html" . }}
 {{ end }}
