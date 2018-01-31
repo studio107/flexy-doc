@@ -1,8 +1,0 @@
-<div>
-    <a class="b-attachments__link"
-       href="{{ printf "%s/%s%s/%s" $.Site.BaseURL $fileDir ($.Scratch.Get "filesName") .Name }}" >
-    <span class="b-icon">file_download</span>
-    {{.Name}}
-    </a>
-    <span class="b-attachments__size">({{div .Size 1024 }} kB)</span>
-</div>
