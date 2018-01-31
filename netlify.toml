@@ -1,2 +1,9 @@
 [context.production.environment]
   HUGO_VERSION = "0.32"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = '''
+    </build/css/app.css>; rel=preload; as=stylesheet, \
+    </build/js/app.js>; rel=preload; as=stylesheet'''
