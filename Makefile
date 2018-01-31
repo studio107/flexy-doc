@@ -6,13 +6,10 @@ build:
 	hugo
 
 devserver:
-	cd themes/hugo-simple-doc/assets
-	yarn start
+	cd themes/hugo-simple-doc/assets; yarn start
 
-recompile:
-	cd themes/hugo-simple-doc/assets
-	yarn install
-	yarn build
+compile:
+	cd themes/hugo-simple-doc/assets; yarn install; yarn build
 
 init:
 	git remote add -f hugo-simple-doc git@github.com:max107/hugo-simple-doc.git
