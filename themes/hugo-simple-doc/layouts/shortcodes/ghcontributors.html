@@ -1,0 +1,15 @@
+<div class="b-contributors">
+    {{ $url := .Get 0 }}
+    {{ range getJSON $url }}
+    <div class="b-contributors__item">
+        <img src="{{.avatar_url}}" class="b-contributors__image"/>
+        <div class="b-contributors__content">
+            <a class="b-contributors__link" href="{{ .html_url }}">@{{ .login }}</a>
+            <div class="b-contributors__commits">
+                <div class="b-icon">swap_horiz</div>
+                <div class="b-contributors__counter">{{ .contributions }}</div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>

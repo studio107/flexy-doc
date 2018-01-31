@@ -7,8 +7,11 @@
 
 @import 'global';
 @import 'code';
+
 @import 'block/site';
 @import 'block/body';
+@import 'block/contributors';
+@import 'block/attachments';
 @import 'block/header';
 @import 'block/content';
 @import 'block/header-menu';

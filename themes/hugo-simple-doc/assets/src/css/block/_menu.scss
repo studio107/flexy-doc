@@ -4,7 +4,7 @@
   }
 
   &__caption {
-    color: #7a92a5;
+    color: flexy-color(caption);
     font-size: 0.95em;
   }
 
@@ -18,7 +18,7 @@
     font-size: 0.95em;
     transition: background-color 0.25s ease;
     text-decoration: none;
-    color: #32536a;
+    color: flexy-color(text);
     display: block;
     box-sizing: border-box;
     padding: 0.2em 0.4em;

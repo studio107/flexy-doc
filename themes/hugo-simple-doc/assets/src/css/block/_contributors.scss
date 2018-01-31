@@ -1,0 +1,27 @@
+$avatar-size: 48px;
+
+.b-contributors {
+  &__item {
+    display: flex;
+    margin-bottom: 1em;
+  }
+
+  &__content {
+    margin-left: 1em;
+  }
+
+  &__counter {
+    margin-left: .5em;
+    display: inline-block;
+    font-size: .85em;
+    color: flexy-color(text);
+  }
+
+  &__image {
+    flex-basis: $avatar-size;
+    flex-shrink: 1;
+    width: $avatar-size !important;
+    height: $avatar-size !important;
+    display: block;
+  }
+}
