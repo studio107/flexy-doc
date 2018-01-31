@@ -18,6 +18,6 @@ hugo server
 ### Доработка и верстка темы
 
 В корне проекта выполните `make compile` для установки зависимостей `npm` и сборки проекта.
-Для запуска проекта в режиме разработки выполните `make devserver`.
+Для запуска проекта в режиме разработки выполните две команды `make devserver` и `hugo --watch`.
 
 Подробнее смотрите в [Makefile](https://github.com/MindyPHP/doc.mindy-cms.com/blob/master/Makefile)
