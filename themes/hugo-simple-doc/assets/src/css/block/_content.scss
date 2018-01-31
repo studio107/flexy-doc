@@ -8,6 +8,10 @@
   &__content {
     @extend .b-typeset;
 
+    strong, b {
+      font-weight: 600;
+    }
+
     pre {
       color: #fff;
       line-height: 19px;
