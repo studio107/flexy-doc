@@ -1,0 +1,13 @@
+.b-nav {
+  margin: 2em 0;
+
+  &__pane {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

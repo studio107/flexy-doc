@@ -1,0 +1,19 @@
+name = "hugo-simple-doc"
+license = "MIT"
+licenselink = "https://github.com/max107/hugo-simple-doc/blob/master/LICENSE.md"
+description = "Documentation theme for Hugo"
+homepage = "https://github.com/max107/hugo-simple-doc"
+repo = "https://github.com/max107/hugo-simple-doc"
+tags = ["documentation", "menu","slide","search"]
+features = ["documentation","menu","nested sections","search","slide", "attachments"]
+min_version = 0.32
+
+[author]
+  name = "Falaleev Maxim"
+  homepage = "https://studio107.ru/"
+
+[original]
+  name = "Learn"
+  homepage = "https://matcornic.github.io/hugo-learn-doc/basics/what-is-this-hugo-theme/"
+  repo = "https://github.com/matcornic/hugo-theme-learn"
+  licenselink = "https://github.com/matcornic/hugo-theme-learn/blob/master/LICENSE.md"

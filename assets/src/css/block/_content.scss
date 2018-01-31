@@ -1,0 +1,5 @@
+.b-content {
+  @include flexy-heading;
+
+  @extend .b-typeset;
+}

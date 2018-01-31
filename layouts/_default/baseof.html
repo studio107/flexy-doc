@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link href="/build/css/app.css" rel="stylesheet">
+    <script src="/build/js/app.js" defer></script>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+</head>
+<body class="b-body" data-base-url="{{.Site.BaseURL}}" data-url="{{ .RelPermalink }}">
+<div class="b-site">
+    <div class="b-site__sidebar">
+        {{ partial "sidebar.html" . }}
+    </div>
+
+    <div class="b-site__content">
+        <div class="b-wrapper">
+            <div class="b-row">
+                <div class="b-col b-col_small_12">
+                    {{ partial "navigation.html" }}
+                    <div class="b-content">
+                        {{ block "main" . }}{{ end }}
+                    </div>
+                    {{ partial "content-footer.html" . }}
+                    {{ block "footer" . }}{{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

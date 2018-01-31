@@ -1,0 +1,13 @@
+.b-header-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__link {
+    display: block;
+
+    &:not(:first-of-type) {
+      margin-left: 1em;
+    }
+  }
+}

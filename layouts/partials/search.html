@@ -1,0 +1,8 @@
+{{- if not .Site.Params.disableSearch }}
+<form action="{{ .Site.BaseURL }}{{ if .Site.IsMultiLingual }}{{ .Site.LanguagePrefix }}{{ end }}"
+      class="b-search__form">
+    <input class="b-input b-search__input"
+           type="text"
+           placeholder="Поиск">
+</form>
+{{- end }}

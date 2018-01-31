@@ -1,0 +1,15 @@
+.b-logo {
+  @include hide-text;
+  background: {
+    image: url(../images/logo.svg);
+    color: transparent;
+    position: 50% 50%;
+    repeat: no-repeat;
+    size: contain;
+  }
+  display: block;
+  margin: 2em 0;
+  text-decoration: none;
+  height: 60px;
+  width: auto;
+}

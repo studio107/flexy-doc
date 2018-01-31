@@ -1,0 +1,10 @@
+.b-header {
+  margin-bottom: 2em;
+
+  &__content {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

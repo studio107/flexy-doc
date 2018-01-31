@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+</head>
+<body data-url="{{ .RelPermalink }}">
+<h1>{{ T "title-404" }}</h1>
+<div>{{ T "message-404" }}</div>
+<div><a href="{{ .Site.BaseURL }}">{{ T "Go-to-homepage" }}</a></div>
+</body>
+</html>
+
+
