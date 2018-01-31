@@ -10,7 +10,11 @@ With docdock, **Each content page composes the menu**, they shape the structure 
 
 To link pages to each other, place them in a folders hierarchy
 
+```php
+<?php echo 'hello world';
 ```
+
+```bash
 content
 ├── level-one
 │   ├── level-two

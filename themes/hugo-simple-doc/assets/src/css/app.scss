@@ -6,12 +6,15 @@
 @import '~flexy-framework/flexy/theme/default';
 
 @import 'global';
+@import 'code';
 @import 'block/site';
 @import 'block/body';
 @import 'block/header';
 @import 'block/content';
 @import 'block/header-menu';
 @import 'block/menu';
+@import 'block/tag';
 @import 'block/logo';
+@import 'block/children';
 @import 'block/nav';
 @import 'block/sidebar';

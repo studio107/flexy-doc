@@ -5,8 +5,7 @@ title = "Mindy Documentation"
 theme = "hugo-simple-doc"
 #themesdir = "../.."
 pygmentsCodeFences = true
-pygmentsStyle = "monokailight"
-disableLiveReload = true
+pygmentsUseClasses=true
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
@@ -18,7 +17,7 @@ enableMissingTranslationPlaceholders = false
 # languageName = "English"
 
 [params]
-editURL = "https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/"
+editURL = "https://github.com/MindyPHP/doc.mindy-cms.com/edit/master/content/"
 ordersectionsby = "weight"
 enableGitInfo = true
 

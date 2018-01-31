@@ -24,9 +24,9 @@
                     {{ partial "navigation.html" }}
                     <div class="b-content">
                         {{ block "main" . }}{{ end }}
+                        {{ partial "content-footer.html" . }}
+                        {{ partial "next-prev-page.html" . }}
                     </div>
-                    {{ partial "content-footer.html" . }}
-                    {{ block "footer" . }}{{ end }}
                 </div>
             </div>
         </div>

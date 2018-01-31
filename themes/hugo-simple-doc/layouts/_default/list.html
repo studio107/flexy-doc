@@ -1,18 +1,15 @@
 {{ define "main" }}
+    <h1 class="b-heading">{{ .Params.title }}</h1>
 
-{{ if .Content }}
-    {{ .Content }}
-{{ else }}
-    {{ $paginator := .Paginator }}
-
-    {{ partial "pagination.html" $paginator }}
-
-    {{ range $index, $page := $paginator.Pages }}
-        {{ .Render "li" }}
+    {{ if .Content }}
+        <div class="b-content__content">
+            {{ .Content }}
+        </div>
+    {{ else }}
+        {{ $paginator := .Paginator }}
+        {{ range $index, $page := $paginator.Pages }}
+            {{ .Render "div" }}
+        {{ end }}
+        {{ partial "pagination.html" $paginator }}
     {{ end }}
-
-    {{ partial "pagination.html" $paginator }}
-
-{{ end }}
-
 {{ end }}

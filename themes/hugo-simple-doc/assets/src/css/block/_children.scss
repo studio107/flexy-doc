@@ -1,0 +1,13 @@
+.b-children {
+  margin: 2em 0;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__child {
+    &:not(:last-of-type) {
+      margin-bottom: 2em;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="b-tag">
+    {{ if .Params.tags }}
+    <span class="b-tag__label">Метки: </span>
+    {{ range $index, $tag := .Params.tags }}
+    <a class="b-tag__tag" href="{{$.Site.BaseURL}}tags/{{ $tag | urlize }}">{{ $tag }}</a>
+    {{ end }}
+    {{ end }}
+</div>

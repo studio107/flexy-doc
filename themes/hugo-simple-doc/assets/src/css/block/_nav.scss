@@ -1,5 +1,11 @@
 .b-nav {
-  margin: 2em 0;
+  border: {
+    width: 1px 0;
+    style: solid;
+    color: #f0f4f7;
+  }
+  margin: 1em 0;
+  padding: 1em 0;
 
   &__pane {
     display: flex;
@@ -9,5 +15,7 @@
 
   &__link {
     text-decoration: none;
+    color: flexy-color(text);
+    font-size: .95em;
   }
 }
