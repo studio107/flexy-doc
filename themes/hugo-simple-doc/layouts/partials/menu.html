@@ -1,0 +1,48 @@
+{{- $currentNode := . }}
+{{- $isRoot := true }}
+
+{{- range .Site.Home.Sections.ByWeight }}
+    {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "isRoot" $isRoot }}
+{{- end }}
+
+<!-- templates -->
+{{- define "section-tree-nav" }}
+    <div class="b-menu__item{{- if .isRoot }} b-menu__item_root{{- end }}">
+        {{- $isRoot := false }}
+        {{- $currentNode := .currentnode }}
+        {{- with .sect }}
+          {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
+            {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
+            {{- safeHTML .Params.head }}
+                    <a href="{{ .RelPermalink }}"
+                       class="b-menu__link{{- if eq .URL $currentNode.URL}} b-menu__link_active{{end}}">
+                        {{ safeHTML .Params.Pre }}{{ .Title }}{{ safeHTML .Params.Post }}
+                    </a>
+
+                    {{- if ne $numberOfPages 0 }}
+                        <div class="b-menu__child">
+                            {{- .Scratch.Set "pages" .Pages }}
+                            {{- if .Sections }}
+                                {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+                            {{- end }}
+                            {{- $pages := (.Scratch.Get "pages") }}
+
+                            {{- range $pages.ByWeight }}
+                                {{- if and .Params.hidden (not $.showhidden) }}
+                                {{- else }}
+                                    {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "isRoot" $isRoot }}
+                                {{- end }}
+                            {{- end }}
+                        </div>
+                    {{- end }}
+                    {{- else }}
+                        {{- if not .Params.Hidden }}
+                            <a href="{{ .RelPermalink }}"
+                               class="b-menu__link{{- if eq .URL $currentNode.URL}} b-menu__link_active{{end -}}">
+                                {{ safeHTML .Params.Pre }}{{ .LinkTitle }}{{ safeHTML .Params.Post }}
+                            </a>
+                        {{- end }}
+                {{- end }}
+        {{- end }}
+    </div>
+{{- end }}

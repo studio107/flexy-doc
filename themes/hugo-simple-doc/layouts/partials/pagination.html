@@ -1,0 +1,16 @@
+<nav class="b-pager" role="navigation">
+    <div class="b-pager__list">
+        {{ if .HasPrev }}
+        <a class="b-pager__link" href="{{ .Prev.URL }}">&larr; {{ T "Previous-Pages" }}</a>
+        {{ end }}
+        <div class="b-pager__item b-pager__item_current">
+            {{ .PageNumber }}
+        </div>
+        {{ if .HasNext }}
+        <a class="b-pager__link" href="{{ .Next.URL }}">{{ T "Next-Pages" }} &rarr;</a>
+        {{ end }}
+    </div>
+    <div class="b-pager__total">
+        {{ .TotalPages }}
+    </div>
+</nav>

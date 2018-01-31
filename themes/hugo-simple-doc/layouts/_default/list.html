@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{ if .Content }}
+    {{ .Content }}
+{{ else }}
+    {{ $paginator := .Paginator }}
+
+    {{ partial "pagination.html" $paginator }}
+
+    {{ range $index, $page := $paginator.Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+
+    {{ partial "pagination.html" $paginator }}
+
+{{ end }}
+
+{{ end }}

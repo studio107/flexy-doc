@@ -1,0 +1,32 @@
+.b-menu {
+  &__child {
+    margin-left: 1em;
+  }
+
+  &__caption {
+    color: #7a92a5;
+    font-size: 0.95em;
+  }
+
+  &__item {
+    &_root {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__link {
+    font-size: 0.95em;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    color: #32536a;
+    display: block;
+    box-sizing: border-box;
+    padding: 0.2em 0.4em;
+
+    &:hover {
+      background: {
+        color: #dfe5eb;
+      }
+    }
+  }
+}
