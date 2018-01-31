@@ -8,9 +8,7 @@
             {{- with .Site.Menus.header }}
             <div class="b-menu__item b-menu__item_root">
                 {{- range sort . "Weight" }}
-                <a class="b-menu__link" href="{{ .URL }}"
-                   target="_blank"
-                   rel="noopener">
+                <a class="b-menu__link" href="{{ .URL }}">
                     {{ safeHTML .Name }}
                 </a>
                 {{- end }}
