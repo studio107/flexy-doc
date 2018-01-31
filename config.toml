@@ -1,0 +1,48 @@
+baseURL = "/"
+languageCode = "ru-ru"
+DefaultContentLanguage = "ru"
+title = "Mindy Documentation"
+theme = "hugo-simple-doc"
+#themesdir = "../.."
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
+disableLiveReload = true
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+# [Languages]
+# [Languages.en]
+# title = "Documentation for Hugo docDock"
+# weight = 1
+# languageName = "English"
+
+[params]
+editURL = "https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/"
+ordersectionsby = "weight"
+enableGitInfo = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.header]]
+name = "Github repo"
+identifier = "ds"
+url = "https://github.com/vjeantet/hugo-theme-docdock"
+weight = 10
+
+[[menu.header]]
+name = "Download"
+url = "https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip"
+weight = 11
+
+[[menu.header]]
+name = "Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
+
+[[menu.header]]
+name = "Credits"
+url = "/credits"
+weight = 30
