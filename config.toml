@@ -20,6 +20,8 @@ enableMissingTranslationPlaceholders = false
 editURL = "https://github.com/MindyPHP/doc.mindy-cms.com/edit/master/content/"
 ordersectionsby = "weight"
 enableGitInfo = true
+analytics_yandex = "47511355"
+analytics_google = "UA-6744947-18"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
