@@ -1,12 +1,20 @@
-all:
+SHELL=/bin/bash
+
+all: build
+
+build:
 	hugo
+
+devserver:
+	cd themes/hugo-simple-doc/assets
+	yarn start
 
 recompile:
 	cd themes/hugo-simple-doc/assets
 	yarn install
 	yarn build
 
-subtree_init:
+init:
 	git remote add -f hugo-simple-doc git@github.com:max107/hugo-simple-doc.git
 	git subtree add --prefix themes/hugo-simple-doc hugo-simple-doc master --squash
 
