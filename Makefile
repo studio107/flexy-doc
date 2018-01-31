@@ -7,10 +7,12 @@ recompile:
 	yarn build
 
 subtree_init:
-	git subtree add --prefix themes/hugo-simple-doc git@github.com:max107/hugo-simple-doc.git master --squash
+	git remote add -f hugo-simple-doc git@github.com:max107/hugo-simple-doc.git
+	git subtree add --prefix themes/hugo-simple-doc hugo-simple-doc master --squash
 
 subtree_push:
-	qwe
+	git subtree push --prefix=themes/hugo-simple-doc hugo-simple-doc master
 
 subtree_pull:
-	qwe
+	git subtree pull --prefix themes/hugo-simple-doc hugo-simple-doc master --squash
+
