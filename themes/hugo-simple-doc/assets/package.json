@@ -48,5 +48,11 @@
     "build:gulp": "gulp build --require babel-register",
     "build:webpack": "webpack --config webpack.prod.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "flexy-breakpoint": "^1.0.1",
+    "flexy-device": "^1.0.1",
+    "flexy-functions": "^1.0.3",
+    "flexy-reset": "^1.0.1",
+    "flexy-visibility": "^1.0.0"
+  }
 }

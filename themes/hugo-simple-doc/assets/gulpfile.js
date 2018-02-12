@@ -12,7 +12,7 @@ let flatten = require('gulp-flatten');
 let sassTildeImporter = require('node-sass-tilde-importer');
 let minifyImg = require('gulp-imagemin');
 let del = require('del');
-let purgecss = require('gulp-purgecss');
+// let purgecss = require('gulp-purgecss');
 let htmlmin = require('gulp-htmlmin');
 let purgeHtml = require('purgecss-from-html');
 let paths = {
@@ -121,7 +121,7 @@ gulp.task('css', () => {
         .pipe(sourcemaps.init())
         .pipe(sass(sassOptions))
         .pipe(postcss(postCssOptions))
-        .pipe(purgecss(purgeOptions))
+        // .pipe(purgecss(purgeOptions))
         .pipe(sourcemaps.write('.', {sourceRoot: '/'}))
         .pipe(gulp.dest(paths.dst.css))
         .pipe(browserSync.stream());

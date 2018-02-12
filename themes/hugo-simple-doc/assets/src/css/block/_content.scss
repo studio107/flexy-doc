@@ -6,13 +6,6 @@
   }
 
   &__content {
-    @extend .b-typeset;
-
-    h3, h4, h5, h6 {
-      border-bottom: 1px solid #f0f4f7;
-      margin-bottom: 2rem;
-    }
-
     strong, b {
       font-weight: 600;
     }

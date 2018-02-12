@@ -2,8 +2,9 @@
 @import 'fonts/socicon';
 
 @import 'settings';
-@import '~flexy-framework/flexy/flexy';
-@import '~flexy-framework/flexy/theme/default';
+@import "./flexy/flexy/flexy";
+@import "./flexy-typeset/src/typeset";
+@import "./flexy-theme/src/theme";
 
 @import 'global';
 @import 'code';
