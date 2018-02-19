@@ -4,10 +4,10 @@
             {{ partial "tags.html" . }}
         </div>
         <div>
-            <a class="b-content__edit"
+            <a class="b-link"
                href="{{ .Site.Params.editURL }}{{ replace .File.Dir "\\" "/" }}{{ .File.LogicalName }}"
                target="blank">
-                <span class="b-icon">mode_edit</span> Изменить
+                Изменить
             </a>
         </div>
     </div>

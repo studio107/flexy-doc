@@ -1,0 +1,29 @@
+.b-warning {
+  margin-bottom: base-spacing();
+
+  &__title {
+    padding: .5em 0;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    background: {
+      color: flexy-color(error);
+    }
+    border-radius: $flexy-theme-border-radius $flexy-theme-border-radius 0 0;
+    color: #fff;
+  }
+
+  &__content {
+    border-radius: 0 0 $flexy-theme-border-radius $flexy-theme-border-radius;
+    padding: 1em;
+    border: {
+      width: 2px;
+      style: solid;
+      color: flexy-color(error);
+    }
+    background: {
+      color: rgba(flexy-color(error), .05);
+    }
+    color: flexy-color(text);
+  }
+}

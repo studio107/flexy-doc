@@ -2,4 +2,3 @@
 title: "Mindy"
 ---
 
-Hello world

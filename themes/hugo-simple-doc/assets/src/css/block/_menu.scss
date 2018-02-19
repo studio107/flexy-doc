@@ -20,13 +20,14 @@
     text-decoration: none;
     color: flexy-color(text);
     display: block;
-    box-sizing: border-box;
     padding: 0.2em 0.4em;
+    border-radius: $flexy-theme-border-radius;
 
     &:hover {
       background: {
-        color: #dfe5eb;
+        color: flexy-color();
       }
+      color: #fff;
     }
   }
 }

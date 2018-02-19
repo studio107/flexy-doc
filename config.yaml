@@ -1,18 +1,16 @@
 baseURL: /
 languageCode: ru-ru
-DefaultContentLanguage: ru
-title: Mindy Documentation
+defaultContentLanguage: ru
+defaultContentLanguageInSubdir: false
+title: Flexy
 theme: hugo-simple-doc
 pygmentsCodeFences: true
 pygmentsUseClasses: true
-defaultContentLanguage: en
-defaultContentLanguageInSubdir: false
-disqusShortname: "doc-mindy-cms-com"
 enableMissingTranslationPlaceholders: false
 permalinks:
     post: '/:sections/:filename'
 params:
-    editURL: 'https://github.com/MindyPHP/doc.mindy-cms.com/edit/master/content/'
+    editURL: 'https://github.com/studio107/flexy/edit/master/content/'
     ordersectionsby: weight
     enableGitInfo: true
     analytics_yandex: '47511355'
@@ -21,5 +19,4 @@ outputs:
     home: ["HTML", "RSS", "JSON"]
 menu:
     header:
-        - { name: Github, url: 'https://github.com/MindyPHP/mindy' }
-        - { name: Скачать, url: 'https://github.com/MindyPHP/mindy/archive/master.zip' }
+        - { name: Github, url: 'https://github.com/studio107/flexy' }

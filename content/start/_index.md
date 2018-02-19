@@ -1,6 +1,4 @@
 ---
-title: Начало
+title: Начало работы
 weight: 1
 ---
-
-TODO

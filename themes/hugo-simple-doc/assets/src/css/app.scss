@@ -1,21 +1,27 @@
-@import 'fonts/icon';
-@import 'fonts/socicon';
-
+@import "../../flexy/src/defaults";
+@import 'font';
 @import 'settings';
-@import "./flexy/flexy/flexy";
-@import "./flexy-typeset/src/typeset";
-@import "./flexy-theme/src/theme";
+@import "../../flexy/src/flexy";
 
-@import 'global';
 @import 'code';
 
-@import 'block/site';
+@include flexy-rhythm-headings {
+  font-weight: bold;
+}
+
 @import 'block/body';
+@import 'block/toc';
+@import 'block/site';
 @import 'block/contributors';
 @import 'block/attachments';
 @import 'block/header';
+@import 'block/helper';
 @import 'block/content';
+@import 'block/link';
+@import 'block/list-content';
 @import 'block/header-menu';
+@import 'block/warning';
+@import 'block/example';
 @import 'block/menu';
 @import 'block/tag';
 @import 'block/logo';

@@ -5,32 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>{{ .Title }} - {{ .Site.Title }}</title>
-    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/>
     <link href="/build/css/app.css" rel="stylesheet">
     <script src="/build/js/app.js" defer></script>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta name="description"
+          content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    {{ with .Site.Params.author }}
+    <meta name="author" content="{{ . }}">{{ end }}
 </head>
-<body class="b-body" data-base-url="{{.Site.BaseURL}}" data-url="{{ .RelPermalink }}">
+<body class="b-body" data-base-url="{{ .Site.BaseURL }}" data-url="{{ .RelPermalink }}">
 <div class="b-site">
-    <div class="b-site__sidebar">
-        {{ partial "sidebar.html" . }}
-    </div>
-
-    <div class="b-site__content">
-        <div class="b-wrapper">
-            <div class="b-row">
-                <div class="b-col b-col_small_12">
-                    {{ partial "navigation.html" }}
-                    <div class="b-content">
-                        {{ block "main" . }}{{ end }}
-                    </div>
+    <div class="b-wrapper">
+        <div class="b-row">
+            <div class="b-col b-col_small_12 b-col_large_3">
+                <div class="b-sidebar">
+                    <a class="b-logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                    {{ partial "sidebar.html" . }}
+                </div>
+            </div>
+            <div class="b-col b-col_small_12 b-col_large_9">
+                {{ partial "navigation.html" }}
+                <div class="b-content">
+                    {{ block "main" . }}{{ end }}
                 </div>
             </div>
         </div>
     </div>
-
-    {{ partial "analytics.html" . }}
 </div>
+{{ partial "analytics.html" . }}
 </body>
 </html>

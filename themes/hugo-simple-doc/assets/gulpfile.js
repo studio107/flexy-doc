@@ -5,6 +5,7 @@ let sass = require('gulp-sass');
 let autoprefixer = require('autoprefixer');
 let flexbugs = require('postcss-flexbugs-fixes');
 let csso = require('postcss-csso');
+let nodeSass = require('node-sass');
 let sourcemaps = require('gulp-sourcemaps');
 let postcss = require('gulp-postcss');
 let plumber = require('gulp-plumber');
@@ -12,17 +13,18 @@ let flatten = require('gulp-flatten');
 let sassTildeImporter = require('node-sass-tilde-importer');
 let minifyImg = require('gulp-imagemin');
 let del = require('del');
-// let purgecss = require('gulp-purgecss');
 let htmlmin = require('gulp-htmlmin');
-let purgeHtml = require('purgecss-from-html');
+
 let paths = {
     src: {
         fonts: [
-            './node_modules/material-design-icons/iconfont/*.{ttf,eot,woff,woff2,svg}',
-            './node_modules/socicon/font/*.{ttf,eot,woff,woff2,svg}',
+            './node_modules/font-lato/*.{ttf,eot,woff,woff2,svg}',
             './src/fonts/**/*.{ttf,eot,woff,woff2,svg}'
         ],
-        css: './src/css/**/*.scss',
+        css: [
+            './src/css/**/*.scss',
+            './flexy/src/**/*.scss'
+        ],
         images: './src/images/**/*.{jpg,jpeg,png,gif,svg}',
         html: path.join(__dirname, '../../../public') + '/**/*.html',
     },
@@ -86,7 +88,7 @@ gulp.task('refresh', done => {
 
 gulp.task('css', () => {
     const sassOptions = {
-        importer: sassTildeImporter
+        importer: sassTildeImporter,
     };
 
     const postCssOptions = [
@@ -103,25 +105,12 @@ gulp.task('css', () => {
         csso(),
     ];
 
-    const purgeOptions = {
-        content: [
-            paths.dst.html + '/**/*.html'
-        ],
-        extractors: [
-            {
-                extractor: purgeHtml,
-                extensions: ['html']
-            }
-        ]
-    };
-
     return gulp
         .src(paths.src.css)
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass(sassOptions))
         .pipe(postcss(postCssOptions))
-        // .pipe(purgecss(purgeOptions))
         .pipe(sourcemaps.write('.', {sourceRoot: '/'}))
         .pipe(gulp.dest(paths.dst.css))
         .pipe(browserSync.stream());

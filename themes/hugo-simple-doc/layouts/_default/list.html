@@ -1,19 +1,15 @@
 {{ define "main" }}
     <h1 class="b-heading">{{ .Params.title }}</h1>
 
-    {{ if .Content }}
-        <div class="b-content__content">
-            {{ .Content }}
-        </div>
-    {{ else }}
-        {{ $paginator := .Paginator }}
-        {{ range $index, $page := $paginator.Pages }}
-            {{ .Render "div" }}
+    <div class="b-content__content">
+        {{ .Content }}
+    </div>
+
+    <ol class="b-list-content">
+        {{ range .Data.Pages }}
+        {{ .Render "li" }}
         {{ end }}
-        {{ partial "pagination.html" $paginator }}
-    {{ end }}
+    </ol>
 
     {{ partial "content-footer.html" . }}
-    {{ partial "next-prev-page.html" . }}
-    {{ template "_internal/disqus.html" . }}
 {{ end }}

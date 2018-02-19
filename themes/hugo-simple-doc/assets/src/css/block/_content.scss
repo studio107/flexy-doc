@@ -1,3 +1,15 @@
+%code {
+  color: #fff;
+  background: {
+    color: #272c35;
+  }
+  border: none;
+  box-shadow: none;
+  border-radius: 2px;
+  font-size: .95rem;
+  font-family: Menlo, Consolas, 'Andale Mono', monospace;
+}
+
 .b-content {
   &__pane {
     display: flex;
@@ -6,38 +18,35 @@
   }
 
   &__content {
-    strong, b {
-      font-weight: 600;
+    @include flexy-rhythm-content;
+
+    hr {
+      @extend .b-divider;
+      margin: base-spacing(2) 0;
     }
 
     pre {
-      color: #fff;
-      line-height: 19px;
-      font-family: Menlo, Consolas, 'Andale Mono', monospace;
-      background: #272c35;
-      border-radius: 2px;
-      font-size: .95rem;
+      @extend %code;
+
       padding: 1em;
-      border: none;
-      box-shadow: none;
+      overflow-x: auto;
 
       code {
         padding: 0;
+        background: {
+          color: transparent;
+        }
       }
     }
 
-    ul, ol {
-      margin-left: 2em;
+    .highlight {
+      margin: base-spacing() 0;
     }
 
     code {
-      background: {
-        color: rgba(254, 240, 186, 0.5);
-      }
+      @extend %code;
+
       padding: 3px;
-      border-radius: 2px;
-      border: none;
-      box-shadow: none;
     }
   }
 
