@@ -1,0 +1,23 @@
+{
+    "name": "flexy-framework",
+    "license": "MIT",
+    "version": "6.0.1",
+    "devDependencies": {
+        "autoprefixer": "^7.2.2",
+        "gulp": "4",
+        "gulp-postcss": "^7.0.1",
+        "gulp-sass": "^3.1.0",
+        "jest": "^22.1.4",
+        "node-sass": "^4.7.2",
+        "postcss-csso": "^3.0.0",
+        "node-sass-tilde-importer": "^1.0.1",
+        "postcss-flexbugs-fixes": "^3.2.0",
+        "prettier": "^1.9.2",
+        "sass-true": "^3.0.2"
+    },
+    "scripts": {
+        "build": "gulp build",
+        "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{tests,src,js}/**/*.{scss,js}\"",
+        "test": "jest"
+    }
+}
