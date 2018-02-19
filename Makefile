@@ -21,3 +21,12 @@ subtree_push:
 subtree_pull:
 	git subtree pull --prefix themes/hugo-simple-doc hugo-simple-doc master --squash
 
+flexy_init:
+	git remote add -f flexy git@github.com:studio107/flexy.git
+	git subtree add --prefix themes/hugo-simple-doc/assets/flexy flexy master --squash
+
+flexy_push:
+	git subtree push --prefix=themes/hugo-simple-doc flexy master
+
+flexy_pull:
+	git subtree pull --prefix themes/hugo-simple-doc flexy master --squash
