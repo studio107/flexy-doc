@@ -35,10 +35,10 @@
   "scripts": {
     "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.{js,scss}\"",
     "start": "npm-run-all -p watch:*",
-    "watch:gulp": "gulp --require babel-register watch",
+    "watch:gulp": "gulp watch",
     "watch:webpack": "webpack --config webpack.dev.js --watch",
     "build": "cross-env NODE_ENV=production npm-run-all -p build:*",
-    "build:gulp": "gulp build --require babel-register",
+    "build:gulp": "gulp build",
     "build:webpack": "webpack --config webpack.prod.js"
   },
   "dependencies": {
