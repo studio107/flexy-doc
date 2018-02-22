@@ -1,20 +1,8 @@
 .b-logo {
-  @include hide-text;
-  background: {
-    image: url(../images/logo.svg);
-    color: transparent;
-    position: 0 0;
-    repeat: no-repeat;
-  }
   display: block;
-  margin-bottom: base-spacing();
   text-decoration: none;
-  height: 60px;
   width: auto;
-
-  @include flexy-breakpoint(small) {
-    background: {
-      position: 50% 50%;
-    }
-  }
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
 }

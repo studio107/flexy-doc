@@ -77,7 +77,7 @@ gulp.task('images', () => {
     return gulp
         .src(paths.src.images)
         .pipe(plumber())
-        .pipe(minifyImg())
+        // .pipe(minifyImg())
         .pipe(gulp.dest(paths.dst.images));
 });
 

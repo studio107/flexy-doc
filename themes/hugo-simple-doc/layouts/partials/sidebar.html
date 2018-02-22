@@ -2,18 +2,6 @@
     {{- partial "language-selector.html" . }}
 
     <div class="b-menu">
-        {{- with .Site.Menus.header }}
-        <div class="b-menu__item b-menu__item_root">
-            {{- range sort . "Weight" }}
-            <a class="b-menu__link" href="{{ .URL }}">
-                {{ safeHTML .Name }}
-            </a>
-            {{- end }}
-        </div>
-        {{- end }}
-
-        <div class="b-divider"></div>
-
         {{ partial "search.html" }}
 
         <div class="b-divider"></div>

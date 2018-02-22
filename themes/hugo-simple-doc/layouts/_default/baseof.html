@@ -14,17 +14,37 @@
     <meta name="author" content="{{ . }}">{{ end }}
 </head>
 <body class="b-body" data-base-url="{{ .Site.BaseURL }}" data-url="{{ .RelPermalink }}">
+<div class="b-header">
+    <div class="b-wrapper">
+        <div class="b-row">
+            <div class="b-col b-col_small_12">
+                <div class="b-header__content">
+                    <a class="b-logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                    <div class="b-header__menu">
+                        {{- with .Site.Menus.header }}
+                        {{- range sort . "Weight" }}
+                        <a class="b-header__link" href="{{ .URL }}">
+                            {{ safeHTML .Name }}
+                        </a>
+                        {{- end }}
+                        {{- end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="b-site">
     <div class="b-wrapper">
         <div class="b-row">
             <div class="b-col b-col_small_12 b-col_large_3">
                 <div class="b-sidebar">
-                    <a class="b-logo" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
                     {{ partial "sidebar.html" . }}
                 </div>
             </div>
             <div class="b-col b-col_small_12 b-col_large_9">
                 {{ partial "navigation.html" }}
+
                 <div class="b-content">
                     {{ block "main" . }}{{ end }}
                 </div>
