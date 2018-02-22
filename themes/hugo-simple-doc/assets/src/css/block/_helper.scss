@@ -1,10 +1,10 @@
 .b-helper {
   background: {
-    color: rgba(flexy-color(), .1);
+    color: rgba(flexy-color(), 0.1);
   }
-  box-shadow: 0 0 0 1px rgba(flexy-color(), .1) inset;
+  box-shadow: 0 0 0 1px rgba(flexy-color(), 0.1) inset;
   height: 1.5em;
-  margin-bottom: .5em;
-  font-size: .95rem;
+  margin-bottom: 0.5em;
+  font-size: 0.95rem;
   text-align: center;
 }

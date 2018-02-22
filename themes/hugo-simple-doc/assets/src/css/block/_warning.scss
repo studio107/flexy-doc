@@ -2,7 +2,7 @@
   margin-bottom: base-spacing();
 
   &__title {
-    padding: .5em 0;
+    padding: 0.5em 0;
     font-weight: bold;
     text-align: center;
     display: block;
@@ -22,7 +22,7 @@
       color: flexy-color(error);
     }
     background: {
-      color: rgba(flexy-color(error), .05);
+      color: rgba(flexy-color(error), 0.05);
     }
     color: flexy-color(text);
   }

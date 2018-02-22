@@ -1,8 +1,8 @@
 .b-tag {
   &__label {
     @include antialias(false);
-    font-size: .95rem;
-    margin-right: .5rem;
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
     font-weight: normal;
     color: flexy-color(text);
   }
@@ -11,6 +11,6 @@
     @include antialias(false);
     font-weight: normal;
     color: flexy-color();
-    font-size: .95rem;
+    font-size: 0.95rem;
   }
 }
